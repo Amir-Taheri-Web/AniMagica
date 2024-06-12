@@ -17,4 +17,7 @@
 }
 
 @layer utilities {
+  .padding-y {
+    @apply py-20;
+  }
 }
