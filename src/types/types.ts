@@ -22,3 +22,5 @@ export interface IAnimeCardProps {
   animeData: IAnimeProps;
   index: number;
 }
+
+export type TAnimeCard = JSX.Element[];

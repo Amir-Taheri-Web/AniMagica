@@ -3,10 +3,23 @@ import Image from "next/image";
 import { FC } from "react";
 import episodes from "@/public/episodes.svg";
 import star from "@/public/star.svg";
+import MotionDiv from "./MotionDiv";
+
+const VARIANTS = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+};
 
 const AnimeCard: FC<IAnimeCardProps> = ({ animeData, index }) => {
   return (
-    <li className="flex flex-col">
+    <MotionDiv
+      className="flex flex-col"
+      variants={VARIANTS}
+      transition={{ duration: 0.5, delay: index * 0.25, ease: "easeIn" }}
+      initial="initial"
+      animate="animate"
+      viewport={{ amount: 0 }}
+    >
       <div className="w-full h-full">
         <Image
           src={`https://shikimori.one${animeData.image.original}`}
@@ -27,7 +40,7 @@ const AnimeCard: FC<IAnimeCardProps> = ({ animeData, index }) => {
       </div>
 
       <div className=" flex gap-8 items-center">
-        <span  className="flex gap-2 items-center">
+        <span className="flex gap-2 items-center">
           <Image src={episodes} alt="episodes icon" width={20} height={20} />{" "}
           <span className="font-bold text-white">{animeData.episodes}</span>
         </span>
@@ -37,7 +50,7 @@ const AnimeCard: FC<IAnimeCardProps> = ({ animeData, index }) => {
           <span className="font-bold text-color-3">{animeData.score}</span>
         </span>
       </div>
-    </li>
+    </MotionDiv>
   );
 };
 
