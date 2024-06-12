@@ -1,9 +1,10 @@
 import { IAnimeProps } from "@/types/types";
 import AnimeCard from "@/components/AnimeCard";
 import fetchAnimes from "./actions";
+import Loader from "@/components/Loader";
 
 const Home = async () => {
-  const data = await fetchAnimes(1);
+  const data: IAnimeProps[] = await fetchAnimes(1);
 
   return (
     <article className="pt-12 pb-20">
@@ -13,7 +14,9 @@ const Home = async () => {
         {data.map((item: IAnimeProps, index: number) => (
           <AnimeCard key={item.id} animeData={item} index={index} />
         ))}
+
       </ul>
+        <Loader />
     </article>
   );
 };
