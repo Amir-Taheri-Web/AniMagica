@@ -10,6 +10,21 @@ const nunito = Nunito({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "AniMagica",
   description: "Browse and find anime",
+  icons: { icon: "./favicon.ico" },
+  authors: [{ name: "Amir Taheri", url: "https://github.com/amir-taheri-web" }],
+  keywords: [
+    "anime",
+    "movies",
+    "tv",
+    "tv show",
+    "nextjs",
+    "framer motion",
+    "server actions",
+    "infinite scroll",
+    "cartoon",
+    "animes",
+    "show",
+  ],
 };
 
 const RootLayout: FC<TRootLayoutProps> = ({ children }) => {
