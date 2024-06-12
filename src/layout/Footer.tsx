@@ -7,7 +7,7 @@ import tiktok from "@/public/tiktok.svg";
 const Footer = () => {
   return (
     <footer className="bg-color-5">
-      <div className="max-container flex justify-between gap-8 items-center py-4">
+      <div className="max-container padding-x flex justify-between max-lg:flex-col gap-8 items-center py-4">
         <p className="text-white font-semibold">
           ©Copyright - All rights reserved
         </p>

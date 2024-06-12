@@ -9,7 +9,9 @@ const Home = async () => {
     <article className="pt-12 pb-20">
       <h2 className="text-3xl font-bold text-white mb-8">Explore Anime</h2>
 
-      <ul className="grid grid-cols-4 gap-16 auto-rows-[1fr]">{data}</ul>
+      <ul className="grid grid-cols-4 max-lg:grid-cols-2 max-sm:gap-8 gap-16 auto-rows-[1fr]">
+        {data}
+      </ul>
       <Loader />
     </article>
   );

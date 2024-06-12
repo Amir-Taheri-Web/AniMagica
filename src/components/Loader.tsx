@@ -24,7 +24,9 @@ const Loader = () => {
 
   return (
     <div className="flex flex-col gap-16 justify-center pt-16">
-      <ul className="grid grid-cols-4 gap-16 auto-rows-[1fr]">{data}</ul>
+      <ul className="grid grid-cols-4 max-lg:grid-cols-2 gap-16 max-sm:gap-8 auto-rows-[1fr]">
+        {data}
+      </ul>
 
       <Image
         src={spinner}

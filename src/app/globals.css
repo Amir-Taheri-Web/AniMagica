@@ -18,7 +18,11 @@
 
 @layer utilities {
   .padding-y {
-    @apply py-20;
+    @apply py-20 max-sm:py-12;
+  }
+
+  .padding-x {
+    @apply max-2xl:px-8;
   }
 }
 

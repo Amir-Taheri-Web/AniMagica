@@ -4,11 +4,11 @@ import anime from "@/public/anime.png";
 
 const Hero = () => {
   return (
-    <header className="bg-hero">
-      <div className="max-container flex justify-between gap-8 items-center padding-y">
+    <header className="bg-hero bg-cover">
+      <div className="max-container flex max-lg:flex-col justify-between gap-8 items-center padding-y padding-x">
         <div className="flex flex-col gap-12">
-          <Image src={logo} alt="hero logo" width={100} />
-          <h1 className="text-4xl font-extrabold text-white w-[27rem] leading-[3.4rem]">
+          <Image src={logo} alt="hero logo" width={100} className="max-lg:self-center" />
+          <h1 className="text-4xl font-extrabold text-white w-[27rem] max-lg:w-auto leading-[3.4rem]">
             Explore The Realm of Anime with{" "}
             <span className="text-color-2">AniMagica</span>
           </h1>

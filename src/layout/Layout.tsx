@@ -7,7 +7,7 @@ const Layout: FC<TLayoutProps> = ({ children }) => {
   return (
     <>
       <Hero />
-      <main className="min-h-svh max-container">{children}</main>
+      <main className="min-h-svh max-container padding-x">{children}</main>
       <Footer />
     </>
   );

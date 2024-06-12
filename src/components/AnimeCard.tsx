@@ -13,24 +13,24 @@ const VARIANTS = {
 const AnimeCard: FC<IAnimeCardProps> = ({ animeData, index }) => {
   return (
     <MotionDiv
-      className="flex flex-col"
+      className="flex flex-col justify-center"
       variants={VARIANTS}
       transition={{ duration: 0.5, delay: index * 0.25, ease: "easeIn" }}
       initial="initial"
       animate="animate"
       viewport={{ amount: 0 }}
     >
-      <div className="w-full h-full">
+      <div className="w-full h-full flex justify-center">
         <Image
           src={`https://shikimori.one${animeData.image.original}`}
           alt={animeData.name}
           width={300}
-          height={500}
-          className="w-full h-[500px] rounded-xl"
+          height={450}
+          className="rounded-xl"
         />
       </div>
 
-      <div className="flex justify-between gap-4 py-4">
+      <div className="flex justify-between gap-4 py-4 max-sm:py-2">
         <h3 className="text-white font-bold text-xl capitalize whitespace-nowrap overflow-hidden overflow-ellipsis">
           {animeData.name}
         </h3>
