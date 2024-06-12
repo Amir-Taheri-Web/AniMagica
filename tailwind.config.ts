@@ -20,6 +20,7 @@ const config: Config = {
         "color-2": "#750E21",
         "color-3": "#E3651D",
         "color-4": "#BED754",
+        "color-5": "#262626",
       },
       boxShadow: {
         "3xl": "0 10px 40px rgba(0, 0, 0, 0.1)",
