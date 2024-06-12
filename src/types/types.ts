@@ -17,3 +17,8 @@ export interface IAnimeProps {
   episodes_aired: number;
   score: string;
 }
+
+export interface IAnimeCardProps {
+  animeData: IAnimeProps;
+  index: number;
+}
